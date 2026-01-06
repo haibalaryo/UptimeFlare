@@ -43,6 +43,19 @@ const workerConfig: WorkerConfig = {
         // Authorization: 'Bearer YOUR_TOKEN_HERE',
       },
     },
+    {
+      id: 'mastodon_server',
+      name: '癒やされたい (Mastodon)',
+      method: 'GET',
+      target: 'https://iyasaretai.pw',
+      tooltip: 'Mastodon Server with Hostdon',
+      statusPageLink: 'https://iyasaretai.pw',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare',
+      },
+    },
     // 追加監視対象
   ],
   notification: {
