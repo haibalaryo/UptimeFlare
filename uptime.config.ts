@@ -45,6 +45,13 @@ const workerConfig: WorkerConfig = {
     },
     // 追加監視対象
   ],
+  notification: {
+    webhook: {
+       url: '',
+       payloadType: 'json',
+       payload: {}
+    }
+  }
 }
 
 // You can define multiple maintenances here
@@ -52,7 +59,7 @@ const workerConfig: WorkerConfig = {
 // Also, related downtime notifications will be skipped (if any)
 // Of course, you can leave it empty if you don't need this feature
 
-// const maintenances: MaintenanceConfig[] = []
+const maintenances: MaintenanceConfig[] = []
 
 // const maintenances: MaintenanceConfig[] = [
 //   {
@@ -73,4 +80,4 @@ const workerConfig: WorkerConfig = {
 // ]
 
 // Don't edit this line
-export { pageConfig, workerConfig }
+export { pageConfig, workerConfig, maintenances }
